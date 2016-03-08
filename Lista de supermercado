@@ -1,0 +1,60 @@
+// supermercado.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main ()
+{
+	int a, b, c, d, e, f, g, h, i, j, total;
+
+	cout<< "Ingrese la cantidad de producto1: ";
+	cin>> a;
+	cout<<" "<<endl;
+
+	cout<< "Ingrese el precio de producto1: ";
+	cin>> f;
+	cout<<" "<<endl;
+
+	cout<< "Ingrese la cantidad de producto2: ";
+	cin>> b;
+	cout<<" "<<endl;
+
+	cout<< "Ingrese el precio de producto2: ";
+	cin>> g;
+	cout<<" "<<endl;
+
+	cout<< "Ingrese la cantidad de producto3: ";
+	cin>> c;
+	cout<<" "<<endl;
+
+	cout<< "Ingrese el precio de producto3: ";
+	cin>> h;
+	cout<<" "<<endl;
+
+	cout<< "Ingrese la cantidad de producto4: ";
+	cin>> d;
+	cout<<" "<<endl;
+
+	cout<< "Ingrese el precio de producto4: ";
+	cin>> i;
+	cout<<" "<<endl;
+
+	cout<<"Ingrese la cantidad de producto5: ";
+	cin>> e;
+	cout<<" "<<endl;
+
+	cout<<"Ingrese el precio de producto5: ";
+	cin>> j;
+	cout<<" "<<endl;
+
+	cout<<" "<<endl;
+
+	total= (a*f)+(b*g)+(c*h)+(d*i)+(e*j);
+			cout<<"El total es: "<<total;
+
+	getch();
+}
