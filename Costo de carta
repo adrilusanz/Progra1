@@ -1,0 +1,44 @@
+// procesoCarta.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main()
+{
+	int costoenvio, peso;
+	cout << "Ingrese el peso: ";
+	cin >> peso;
+	cout << "  " << endl;
+	if (peso<=0) {
+		cout << "Valor invalido" << endl;
+
+	} else {
+		if ((peso<=50)) {
+			costoenvio = 1.5*peso;;
+		} else {
+			if ((peso<=100)) {
+				costoenvio = 4*peso;
+			} else {
+				if ((peso<=200)) {
+					costoenvio = 6*peso;
+				} else {
+					if ((peso<=350)) {
+						costoenvio = 10.5*peso;
+					} else {
+						if ((peso<=500)) {
+							costoenvio = 15*peso;
+						} else {
+							cout << "No se puede enviar como carta." << endl;
+						}
+					}
+				}
+			}
+		}
+	}
+	if ((peso<=500)) {
+		cout << "El costo de la carta es de:  Bs" << costoenvio << endl;
+	}
+	getch ();
+}
