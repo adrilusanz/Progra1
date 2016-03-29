@@ -1,0 +1,31 @@
+// Desarrollo Numeros.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main()
+{
+	int N, U, D, C, M;
+	cout << "Ingrese el numero:";
+	cin >> N;
+	cout << "  " << endl;
+	if (N<10000)
+	{
+		U = (N % 10);
+		cout << "La unidad es: " << U << endl;
+		D = ((N / 10)%10);
+		cout << "La decena es: " << D << endl;
+		C = ((N / 100)%10);
+		cout << "La centena es: " << C << endl;
+		M = ((N / 1000)%10);
+		cout << "El millar es: " << M << endl;
+	}	
+	else
+	{
+		if (N>10000)
+		cout << "Valor invalido" <<endl;
+	}
+	getch();
+}
