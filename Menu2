@@ -1,0 +1,75 @@
+// menu.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h"
+
+using namespace std;
+
+void main()
+{
+   float altura, base, peso, costoenvio, area;
+   int opcion;
+
+   do {
+     cout << endl;
+     cout << "1.- Area de un triangulo: " << endl;
+     cout << "2.- Calcular el precio de la carta: " << endl;
+	 cout << "0.- Salir" << endl;
+     cout << "Elige una opción: " ;
+     cin >> opcion;
+     switch (opcion) {
+	    case 1:    
+			{ cout << "Ingrese la altura: ";
+			cin >> altura;
+			cout << "Ingrese la base: ";
+			cin >> base;
+			area=(base*altura)/2;
+			cout<<"el area es: "<< area;
+			break;
+			}
+	    case 2:
+			{ cout << "Ingrese el peso: ";
+			cin >> peso;
+			if (peso<=0) {
+		cout << "Valor invalido" << endl;
+
+		} else {
+			if ((peso<=50)) {
+				costoenvio = 1.5*peso;;
+			} else {
+				if ((peso<=100)) {
+					costoenvio = 4*peso;
+				} else {
+					if ((peso<=200)) {
+						costoenvio = 6*peso;
+					} else {
+						if ((peso<=350)) {
+							costoenvio = 10.5*peso;
+						} else {
+							if ((peso<=500)) {
+								costoenvio = 15*peso;
+							} else {
+								cout << "No se puede enviar como carta." << endl;
+							}
+						}
+					}
+				}
+			}
+		}
+			if ((peso<=500)) {
+			cout << "El costo de la carta es de:  Bs" << costoenvio << endl;
+			break;
+			}
+		}
+		case 0: cout << "Salir";
+			break;
+	    default: cout << "Opcion invalida" << endl;
+     }
+	   getch();
+	   system("cls");
+	 } while (opcion != 0);
+     getch();
+}
