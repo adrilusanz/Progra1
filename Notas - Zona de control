@@ -17,14 +17,19 @@ void main ()
 	{
 		cout<< "Ingrese nota practica:"<< endl;
 		cin>> np;
+		cout<< " " << endl;
 		cout<< "Ingrese nota del 1er parcial:"<< endl;
 		cin>> npp1;
+		cout<< " " << endl;
 		cout<< "Ingrese nota del 2do parcial:"<< endl;
 		cin>> npp2;
+		cout<< " " << endl;
 		cout<< "Ingrese nota del 3er parcial:"<< endl;
 		cin>> npp3;
+		cout<< " " << endl;
 		cout<< "Ingrese nota del Examen final:"<< endl;
 		cin>> ef;
+		cout<< " " << endl;
 
 		nf=(np*0.2)+(((npp1+npp2+npp3)/3)*0.4)+(ef*0.4);
 		promedio =promedio+nf;
@@ -35,5 +40,5 @@ void main ()
 	}
 	cout<< "El promedio de las notas sera: "<<endl;
 	cout<< promedio/i;
-	getch ();
+	getch();
 }
