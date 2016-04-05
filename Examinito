@@ -1,0 +1,40 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h"
+#include "stdlib.h"
+
+using namespace std;
+
+void main ()
+{
+	float pr, p1, p2, p3, ef, nota, s;
+	int i, n, nf;
+	s=0;
+	i=0;
+
+	cout<< "Ingrese el numero de estudiantes: "<<endl;
+	cin>>n;
+	 
+	 while (i<n)
+	 {
+		cout<< "Ingrese la nota practica: "<<endl;
+		cin>>pr;
+		cout<< "Ingrese la nota del primer parcial: "<<endl;
+		cin>>p1;
+		cout<< "Ingrese la nota del segundo parcial: "<<endl;
+		cin>>p2;
+		cout<< "Ingrese la nota del tercer parcial: "<<endl;
+		cin>>p3;
+		cout<< "Ingrese la nota del examen final: "<<endl;
+		cin>>ef;
+		nf=(((p1+p2+p3)/3)*0.4)+(ef*0.4)+(pr*0.2);
+		cout<<nf<<endl;
+		s=s+nf;
+		cout<< "La nota final es: "<<ef<<endl;
+		i++;
+		system("cls");
+	 }
+	 cout<< "El Promedio es: "<<s/n<<endl;
+	 getch();
+}
