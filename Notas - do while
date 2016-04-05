@@ -33,7 +33,7 @@ void main ()
 		nf=(np*0.2)+(((npp1+npp2+npp3)/3)*0.4)+(ef*0.4);
 		p =p+nf;
 		i= 1+i;
-		cout<< "Desea continuar"<< endl;
+		cout<< "Desea continuar (n para finalizar)"<< endl;
 		cin>> m;
 		cout<< " " << endl;
 		system ("cls");
