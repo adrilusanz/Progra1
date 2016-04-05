@@ -1,10 +1,6 @@
-// NotasZonadecontrol.cpp : Defines the entry point for the console application.
-//
-
 #include "stdafx.h"
 #include <iostream>
 #include "conio.h"
-#include "stdlib.h"
 #include "stdlib.h"
 
 using namespace std;
@@ -13,31 +9,37 @@ void main ()
 {
 	float np,npp1,npp2,npp3,nf, ef;
 	int i, p;
-	char m; // permite ingresar letras;
+	char m;
 	p=0;
 	i=1;
 	do
 	{
 		cout<< "Ingrese nota practica:"<< endl;
 		cin>> np;
+		cout<< " " << endl;
 		cout<< "Ingrese nota del 1er parcial:"<< endl;
 		cin>> npp1;
+		cout<< " " << endl;
 		cout<< "Ingrese nota del 2do parcial:"<< endl;
 		cin>> npp2;
+		cout<< " " << endl;
 		cout<< "Ingrese nota del 3er parcial:"<< endl;
 		cin>> npp3;
+		cout<< " " << endl;
 		cout<< "Ingrese nota del Examen final:"<< endl;
 		cin>> ef;
+		cout<< " " << endl;
 
 		nf=(np*0.2)+(((npp1+npp2+npp3)/3)*0.4)+(ef*0.4);
-		p=p+nf;
-		i = 1+i;
+		p =p+nf;
+		i= 1+i;
 		cout<< "Desea continuar"<< endl;
 		cin>> m;
-		i++;
+		cout<< " " << endl;
 		system ("cls");
-	} while (m!='n');
+	}
+	while (m!='n');
 	cout<< "El promedio de las notas sera: "<<endl;
 	cout<< p/(i-1);
-	getch ();
+	getch();
 }
