@@ -8,10 +8,10 @@ using namespace std;
 void main ()
 {
 	float np,npp1,npp2,npp3,nf,ef,promedio;
-	int i,p,NR;
-	p=0;
+	int i,NR;
+	promedio=0;
 	i=0;
-	cout<< "Ingrese el numero de registro:"<< endl;
+	cout<< "Ingrese el numero de registro: (-999 para terminar)"<< endl;
 	cin>> NR;
 	while (NR!=-999)
 	{
@@ -27,14 +27,13 @@ void main ()
 		cin>> ef;
 
 		nf=(np*0.2)+(((npp1+npp2+npp3)/3)*0.4)+(ef*0.4);
-		p=p+nf;
+		promedio =promedio+nf;
 		i = 1+i;
 		system ("cls");
-		cout<< "Ingrese el numero de registro"<< endl;
+		cout<< "Ingrese el numero de registro (-999 para terminar)"<< endl;
 		cin>> NR;
 	}
 	cout<< "El promedio de las notas sera: "<<endl;
-	cout<< p/i;
+	cout<< promedio/i;
 	getch ();
 }
-
