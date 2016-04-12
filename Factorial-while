@@ -1,0 +1,25 @@
+using namespace std;
+
+void main ()
+{
+	int factorial, i, n;
+	// factorial es un acumulador de producto
+	// i es un conyatdor
+	// n es el numero al que necesita calcular el factorial
+	// validar la entrada
+	factorial=1; // Inicializar el acumulador de producto
+	i=1; // inicializa el contador
+	do {
+		cout <<"Ingrese el valor de n: ";
+		cin >>n ;
+	} while (n<0); // La cindicion debe contemplar volores
+				   // Negar la condicion correcta
+	while (i<=n) //se condiciona el ciclo
+	{
+		factorial = factorial*i; // acumulador de producto
+		i++; //se realiza el incremento
+	}
+	cout << " El factorial de " <<n<< " es: "<<factorial;
+	getch ();
+}
+
