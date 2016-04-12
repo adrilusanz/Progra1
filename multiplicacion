@@ -1,0 +1,29 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+// Calcular la siguiente suma
+// S= 1 - 2 + 3 - 4 + 5 - .........+/- N.
+
+
+void main ()
+{
+	int n, s, i;
+
+	do {
+	cout << "Ingrese la cantidad de numeros que quiere multiplicar" << endl;
+	cout<< endl;
+	cin >> n;
+	cout<< endl;
+	
+	} while (n<0);
+	s=1;
+	for ( i= 1; i<=n ; i++)
+	{
+		s = s*i;
+		cout << "multiplicando: " << i << endl;
+	}
+	cout << "La multiplicacion de todos los valores es: " << s ;
+	getch ();
+}
