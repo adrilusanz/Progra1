@@ -1,0 +1,44 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+void main ()
+{
+	int a,b,c,d,MCD,i,MCM;
+	i = 2;
+	MCD = 1;
+ 	cout<< "Ingresar dos numeros de los cuales quiere buscar su mcm"<<endl;
+	cout<<"Primer numero:   "<<endl;
+	cin>> a;
+	cout<<"Segundo numero:   "<<endl;
+	cin>> b;
+
+	if(a<b)
+		{
+			c=a;
+			d=b;
+		}
+		else 
+		{
+			d=a;
+			c=b;
+		}
+	while(i<=d)
+    {
+		if((c%i==0) && (d%i==0))
+			{
+				MCD=MCD*i;
+				c=c/i;
+				d=d/i;
+			}
+		else
+			{
+				i++;
+			}
+	
+    }
+	MCM = (a*b)/MCD;
+	cout<<"El minimo comun multiplo es:   "<<MCM;
+	getch();
+}
