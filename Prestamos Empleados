@@ -1,0 +1,49 @@
+// CiclosAnidados.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <string>
+
+using namespace std;
+ void main ()
+ {
+	 int aux, codigo, numprestamo;
+	 float montoprestamo, montoe, montototal;
+	 string nombre,salir;
+
+	 montototal = 0;
+
+	 cout<< "Ingrese el Codigo del empleado:   (Ingrese -999 para terminar)      ";
+	 cin>> codigo;
+	 cout<< endl;
+
+	 while ( codigo != -999)
+	 {
+		 aux = codigo;
+		 montoe = 0;
+		 while (aux==codigo)
+		 {
+			 cout<< "Ingrese Nombre del empleado:  ";
+			 cin>> nombre;
+			 cout<< endl;
+			 cout<< "Ingrese numero de prestamos:  ";
+			 cin>> numprestamo;
+			 cout<< endl;
+			 cout<< "Ingrese monto de prestamo:  ";
+			 cin>> montoprestamo;
+			 cout<< endl;
+			 montoe= montoe + montoprestamo;
+			 
+			 cout<< "Ingrese codigo de empleado:  ";
+			 cin>> codigo;
+			 cout<< endl;
+		 }
+		 cout<< "Empleado:  " << aux << "  Monto de Empleado: " << montoe << endl;
+		 montototal = montototal + montoe;
+		 cout<< endl;
+	 }
+	 cout<< " El monto prestado a los empleados es: " << montototal << endl;
+	getch ();
+ }
