@@ -1,0 +1,26 @@
+// Ejemplo: calcular el volumen de un cilindro,
+//se ingresan como datos de entrada su radio y altura
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+float vol_cilindro(float r, float a); // Prototipo de funcion
+int main()
+{
+    float radio, altura, volumen;	
+    cout <<"Ingrese el radio: ";
+	cin >>radio;	
+    cout <<"Ingrese la altura: ";
+	cin >> altura;	
+    volumen= vol_cilindro(radio,altura); // Llamada a la funcion
+    cout <<"El volumen es:" <<volumen;    
+    return 0; 
+}
+float vol_cilindro (float r, float a) // Declaracion de la funciòn
+{ float v;
+	v = 3.141516*r*r*a ;	
+    return v;
+	getch();
+}
