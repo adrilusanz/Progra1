@@ -1,0 +1,26 @@
+// asdasd.cpp : Defines the entry point for the console application.
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+float a_pagar(float horas, float costo); // Prototipo de funcion
+int main()
+{
+    float ganancia, horas, costo;	
+    cout <<"Ingrese el numero de horas trabajadas: ";
+	cin >>horas;	
+    cout <<"Ingrese el costo por horas: ";
+	cin >> costo;	
+    ganancia= a_pagar(horas,costo); // Llamada a la funcion
+    cout <<"La ganancia es: " <<ganancia;    
+    getch();
+	return 0;
+
+}
+float a_pagar (float horas, float costo) // Declaracion de la funciòn
+{ float g;
+	g = horas*costo;	
+    return g;
+}
