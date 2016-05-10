@@ -1,0 +1,95 @@
+
+#include "stdafx.h"
+#include <iostream>
+#include <stdlib.h>
+#include <conio.h>
+
+
+float area(float lado);
+void potencia(float base, int exp, float &z);
+int MCD(int a, int b);
+using namespace std;
+
+void main(){
+	int l,e,opcion,n1,n2;
+	float b,x,r1,r2,z;
+	do{
+		cout<<"------MENU------"<<endl;
+		cout<<"1.- Area del Cuadrado"<<endl;
+		cout<<"2.- Calular Potencia"<<endl;
+		cout<<"3.- MCD"<<endl;
+		cout<<"0.- Salir"<<endl;
+		cout<<"Ingrese la opcion: ";
+		cin>>opcion;
+		switch (opcion)
+		{
+			case 1:
+				{
+				cout<<"Ingrese el Lado: "<<endl;
+				cin>>l;
+				r1=area(l);
+				cout<<"El area es: "<<r1<<endl;
+				break;
+				}
+			case 2:
+				{
+				cout<<"Ingrese la Base: "<<endl;
+				cin>>b;
+				cout<<"Ingrese el exp: "<<endl;
+				cin>>e;
+				potencia(b,e,z);
+				cout<<"El resultado es: "<<z<<endl;
+				break;
+				}
+			case 3:
+				{
+				cout<<"ingrese un Numero: ";
+				cin>>n1;
+				cout<<"ingrese un numero: ";
+				cin>>n2;
+				r2=MCD(n1,n2);
+				cout<<"El MCD es: "<<r2;
+				break;
+				}
+			case 0:
+				{
+				cout<<"Salir";
+				break;
+				}
+			default: 
+				{
+				cout<<"valor invalido, infrese otro numero"<<endl;
+				break;}
+		}
+
+	}
+while(opcion!=0);
+getch();
+system ("cls");
+}
+
+float area(float l)
+{
+	float a;
+	a=l*l;
+	return a;
+}
+void potencia(float b, int e, float &z)
+{
+	z=1;
+	for (int i=1;i<=e;i++){
+		z=z*b;}
+}
+int MCD(int n1, int n2)
+{
+	int c;
+	while (n1!=n2)
+	{
+		if (n1>n2)
+			n1=n1-n2;
+		else
+			n2=n2-n1;
+	}
+	c=n1;
+	return c;
+}
