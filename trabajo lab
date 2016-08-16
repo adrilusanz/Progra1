@@ -1,0 +1,130 @@
+#include <iostream>
+#include <conio.h>
+#include "math.h"
+int contar(int n);
+int  suma(int n);
+bool verifesprimo (int n);
+int sumardigitosprimos (int n);
+using namespace std;
+
+void main()
+{
+	int a,e,s,t,op,con;
+	do{
+		cout<<"Ingrese un valor natural: ";
+			cin>>a;
+			if(a>0)
+			{
+
+			}
+			else
+			{
+				cout<<endl;
+				do{
+					cout<<"Error....Debes ingresar un valor positivo: ";
+					cin>>a;}while(a<0);
+				}
+	}while(a<0);
+	cout<<"1. Sumar elementos del numero"<<endl;
+	cout<<"2. Contar los elementos del numero"<<endl;
+	cout<<"3. sumar numeros primos del numero"<<endl; 
+	cout<<"0. Salir"<<endl;
+	cin>>op;
+
+	switch(op){
+		case 1:{
+				s=suma(a);
+				cout<<endl;
+				cout<<"La suma de los elementos del numero es: "<<s;
+				break;}
+		case 2:{
+				e=contar(a);
+				cout<<endl;
+				cout<<"El numero de elementos es: "<<e;
+				break;}
+		case 3:{
+			t=sumardigitosprimos(a);
+			cout<<endl;
+			cout<<"La suma de los primos es :"<<t;
+			break;}
+		case 4:{
+			con = concatenar (a,b);
+			cout<<endl;
+			cout<<"El resultado es: ";<< con;
+			break;}
+
+		case 0: {cout<<"Salir"<<endl;
+			break;}
+		default : {cout<<"Valor invalido"<<endl;
+			break;}
+	}
+	getch();
+}
+int contar(int n)
+{	int u,c=0;
+	for(int i=1;i<=n;i=i*10)
+	{
+		u=(n/i)%10;
+		
+		c=c+1;
+	}
+	return c;
+}
+int suma(int n)
+{	int s=0,u;
+
+	for(int i=1;i<=n;i=i*10)
+	{
+		u=(n/i)%10;
+		s=s+u;
+	}
+	return s;
+}
+
+	bool verifesprimo(int n)
+	{
+		int i;
+		bool k = true;
+		for(i=2;i<n;i++){
+			if( n%i==0) {
+				k=false;
+			}
+		}
+		return (k);
+}
+	int sumardigitosprimos(int n) {
+		int d, s = 0;
+		while (n > 0) {
+			d = n % 10;
+			if(verifesprimo(d) == true){
+				s=s+d;
+			}
+			n=n/10;
+		}
+		return(s);
+	}
+int contarDigitos (int n) 
+{ int c=0;
+	while (n>0)
+	{
+		c++;
+		n = n /10;
+	}
+	return (c);
+}
+
+int concatenar (int b, int a)
+{
+	return( a * pwf(10, contarDigitos(b)) + b);
+}
+	void main ()
+	{
+		int nro,nro2,r;
+		cout<< "Inroducir un numero natural: ";
+		cin>> nro;
+		cout<< "Inroducir un numero natural: ";
+		cin>> nro2;
+		r = concatenar (nro,nro2);
+		cout<< "Resultado es: "<< r;
+		getch();
+	}
